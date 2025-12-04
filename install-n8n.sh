@@ -80,7 +80,7 @@ main() {
     # Ask for domain
     echo ""
     print_message "Enter your domain name (e.g., n8n.example.com):"
-    read -p "Domain: " DOMAIN
+    read -p "Domain: " DOMAIN < /dev/tty
     
     if [ -z "$DOMAIN" ]; then
         print_error "Domain cannot be empty!"
@@ -101,7 +101,7 @@ main() {
     echo ""
     
     # Ask for confirmation
-    read -p "Have you configured DNS correctly? (yes/no): " DNS_CONFIRM
+    read -p "Have you configured DNS correctly? (yes/no): " DNS_CONFIRM < /dev/tty
     
     if [[ ! "$DNS_CONFIRM" =~ ^[Yy][Ee][Ss]$ ]]; then
         print_error "Please configure DNS first and run the script again."
@@ -110,7 +110,7 @@ main() {
     
     # Ask for email
     echo ""
-    read -p "Enter your email for SSL certificate notifications: " EMAIL
+    read -p "Enter your email for SSL certificate notifications: " EMAIL < /dev/tty
     
     if [ -z "$EMAIL" ]; then
         print_error "Email cannot be empty!"
@@ -122,7 +122,7 @@ main() {
     echo "  Domain: $DOMAIN"
     echo "  Email: $EMAIL"
     echo ""
-    read -p "Press Enter to continue or Ctrl+C to cancel..."
+    read -p "Press Enter to continue or Ctrl+C to cancel..." < /dev/tty
     
     # Start installation
     echo ""
