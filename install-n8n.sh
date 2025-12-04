@@ -2,8 +2,11 @@
 
 # ============================================
 # n8n Auto Installer with Docker & SSL
-# Author: Your Name
-# GitHub: https://github.com/yourusername/n8n-installer
+# Author: Mehrdad Hooshmand
+# GitHub: https://github.com/Mehrdad-Hooshmand/n8n-auto-installer
+#
+# One-command installation:
+# bash <(curl -fsSL https://raw.githubusercontent.com/Mehrdad-Hooshmand/n8n-auto-installer/main/install-n8n.sh)
 # ============================================
 
 set -e
